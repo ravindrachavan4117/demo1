@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="27" registryId="e2e73008-448e-473b-a3b2-86c1c28b5d25">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: Admin (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">Admin</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">Admin</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="uiApplicationName"/>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="5" title="Set Values: Name">
+      <tags/>
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">Name</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="value" valueClass="string">Ravindra chavan</value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.io.Write" name="Write" testItemId="13" title="Write: {Name}=&gt;C:\\\\Users\\\\ravindra.chavan\\\\Downloads\\\\ExcelData1.xlsx">
+      <arguments>
+        <argument id="data">
+          <value class="variable">
+            <path element="Name"/>
+          </value>
+        </argument>
+        <argument id="dataUrl">
+          <value class="excelTarget" sheetWriteMode="Overwrite">
+            <workbookPath class="value" valueClass="string">C:\\Users\\ravindra.chavan\\Downloads\\ExcelData1.xlsx</workbookPath>
+            <worksheetName class="value" valueClass="string">OpportunityReplace</worksheetName>
+          </value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">C:\\\\Users\\\\ravindra.chavan\\\\Downloads\\\\ExcelData1.xlsx</value>
+        </argument>
+      </arguments>
+      <generatedParameters/>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.string.Split" name="Split" testItemId="6" title="Split: {Name}=&gt; =&gt;Ravindra">
+      <arguments>
+        <argument id="input">
+          <value class="variable">
+            <path element="Name"/>
+          </value>
+        </argument>
+        <argument id="separator">
+          <value class="value" valueClass="string"> </value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">Ravindra</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.io.Write" name="Write" testItemId="14" title="Write: {Ravindra}=&gt;C:\\\\Users\\\\ravindra.chavan\\\\Downloads\\\\ExcelData1.xlsx">
+      <arguments>
+        <argument id="data">
+          <value class="variable">
+            <path element="Ravindra"/>
+          </value>
+        </argument>
+        <argument id="dataUrl">
+          <value class="excelTarget" sheetWriteMode="Append">
+            <workbookPath class="value" valueClass="string">C:\\Users\\ravindra.chavan\\Downloads\\ExcelData1.xlsx</workbookPath>
+            <worksheetName class="value" valueClass="string">OpportunityReplace</worksheetName>
+          </value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">C:\\\\Users\\\\ravindra.chavan\\\\Downloads\\\\ExcelData1.xlsx</value>
+        </argument>
+      </arguments>
+      <generatedParameters/>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.ForEach" name="ForEach" testItemId="9" title="For Each: {Ravindra}=&gt;Ravindra">
+      <arguments>
+        <argument id="list">
+          <value class="variable">
+            <path element="Ravindra"/>
+          </value>
+        </argument>
+        <argument id="fromItem">
+          <value class="value" valueClass="decimal">1</value>
+        </argument>
+        <argument id="valueName">
+          <value class="value" valueClass="string">Ravindra</value>
+        </argument>
+        <argument id="continueOnFailure"/>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="10"/>
+      </clauses>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.io.Write" name="Write" testItemId="3" title="Write: {Name}=&gt;C:\\\\Users\\\\ravindra.chavan\\\\Downloads\\\\ExcelData1.xlsx">
+      <arguments>
+        <argument id="data">
+          <value class="variable">
+            <path element="Name"/>
+          </value>
+        </argument>
+        <argument id="dataUrl">
+          <value class="excelTarget" sheetWriteMode="Append">
+            <workbookPath class="value" valueClass="string">C:\\Users\\ravindra.chavan\\Downloads\\ExcelData1.xlsx</workbookPath>
+            <worksheetName class="value" valueClass="string">OpportunityReplace</worksheetName>
+          </value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">C:\\\\Users\\\\ravindra.chavan\\\\Downloads\\\\ExcelData1.xlsx</value>
+        </argument>
+      </arguments>
+      <generatedParameters/>
+    </apiCall>
+  </steps>
+</testCase>

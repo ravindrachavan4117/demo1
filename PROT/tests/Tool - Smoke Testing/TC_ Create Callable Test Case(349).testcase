@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="34">
+  <summary/>
+  <steps>
+    <caseCall testCaseId="5c83eb2e-c38f-4d9d-9ee6-da0454d8a987" testCasePath="tests/Tool - Smoke Testing/TC_Callable Input Output parameterization(350).testcase" testItemId="20">
+      <arguments>
+        <argument id="resultName">
+          <value class="value" valueClass="string">Admin</value>
+        </argument>
+      </arguments>
+      <outputArguments>
+        <outputArgument id="resultName}">
+          <name class="value" valueClass="string">resultName}</name>
+        </outputArgument>
+        <outputArgument id="resultName1">
+          <name class="value" valueClass="string">resultName1</name>
+        </outputArgument>
+      </outputArguments>
+    </caseCall>
+  </steps>
+</testCase>

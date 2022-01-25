@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="32" registryId="5c83eb2e-c38f-4d9d-9ee6-da0454d8a987" visibility="Internal">
+  <summary/>
+  <steps/>
+  <params>
+    <param linkedToUrl="provar:hasvalue:59ba5793-6e19-4cd9-aca6-c6857ca7ca62" name="resultName" title="Result Name">
+      <summary>The name that the resulting connection will be stored under.</summary>
+      <type>
+        <textType/>
+      </type>
+    </param>
+  </params>
+  <outputParams>
+    <param defaultScope="Test" name="resultName1" title="{resultName}">
+      <summary>The name that the resulting connection will be stored under.</summary>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+            <valueConstraint name="regex"/>
+          </constraints>
+        </textType>
+      </type>
+      <sourceValue class="invalid">{{resultName}}</sourceValue>
+    </param>
+  </outputParams>
+  <args>
+    <argument id="resultName">
+      <value class="value" valueClass="string">Admin</value>
+    </argument>
+  </args>
+  <outputArgs>
+    <outputArgument id="resultName1">
+      <name class="value" valueClass="string">resultName1</name>
+    </outputArgument>
+  </outputArgs>
+</testCase>
