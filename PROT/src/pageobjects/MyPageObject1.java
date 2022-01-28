@@ -41,5 +41,11 @@ public class MyPageObject1 {
 		@FindBy(xpath = "//input")
 		public WebElement text;
 	}
+	@LinkType()
+	@FindBy(xpath = "//a[normalize-space(.)='Alerts']")
+	public WebElement alerts;
+	@ButtonType()
+	@FindBy(xpath = "//div[@id='Textbox']/button")
+	public WebElement clickTheButtonToDemonstrateThePromptBox;
 			
 }
