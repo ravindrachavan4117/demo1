@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfListView n="AllAccounts" s="List View" sfListId="00B1t000002BOFOEA4" t="All Accounts">
+  <actions/>
+  <columns>
+    <sfListColumn boundToField="Name" boundToObject="Account" fieldNameOrPath="Name" metadataColName="ACCOUNT.NAME" n="Account Name" s="" sortable="true"/>
+    <sfListColumn boundToField="BillingState" boundToObject="Account" fieldNameOrPath="BillingState" metadataColName="ACCOUNT.ADDRESS1_STATE" n="Billing State/Province" s="" sortable="true"/>
+    <sfListColumn boundToField="Phone" boundToObject="Account" fieldNameOrPath="Phone" metadataColName="ACCOUNT.PHONE1" n="Phone" s="" sortable="true"/>
+    <sfListColumn boundToField="Type" boundToObject="Account" fieldNameOrPath="Type" metadataColName="ACCOUNT.TYPE" n="Type" s="" sortable="true"/>
+    <sfListColumn boundToField="Alias" boundToObject="User" fieldNameOrPath="Owner_Alias" metadataColName="CORE.USERS.ALIAS" n="Account Owner Alias" s="" sortable="true"/>
+  </columns>
+</sfListView>

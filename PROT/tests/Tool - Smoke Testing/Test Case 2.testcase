@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="8">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.restservice.WebConnect" name="WebConnect" testItemId="1" title="Web Connect: soap">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">soap</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">soap</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+  </steps>
+</testCase>

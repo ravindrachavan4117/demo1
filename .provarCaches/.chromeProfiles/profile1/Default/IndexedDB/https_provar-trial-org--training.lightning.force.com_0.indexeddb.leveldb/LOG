@@ -1,0 +1,12 @@
+2022/01/27-12:34:25.564 4eb4 Reusing MANIFEST D:\test\.provarCaches\.chromeProfiles\profile1\Default\IndexedDB\https_provar-trial-org--training.lightning.force.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/01/27-12:34:25.565 4eb4 Recovering log #29
+2022/01/27-12:34:25.569 4eb4 Reusing old log D:\test\.provarCaches\.chromeProfiles\profile1\Default\IndexedDB\https_provar-trial-org--training.lightning.force.com_0.indexeddb.leveldb/000029.log 
+2022/01/27-12:34:33.086 4b6c Level-0 table #34: started
+2022/01/27-12:34:33.099 4b6c Level-0 table #34: 2328175 bytes OK
+2022/01/27-12:34:33.100 4b6c Delete type=0 #29
+2022/01/27-12:34:56.206 df4 Compacting 1@1 + 1@2 files
+2022/01/27-12:34:56.218 df4 Generated table #35@1: 920 keys, 1339236 bytes
+2022/01/27-12:34:56.218 df4 Compacted 1@1 + 1@2 files => 1339236 bytes
+2022/01/27-12:34:56.219 df4 compacted to: files[ 0 0 1 0 0 0 0 ]
+2022/01/27-12:34:56.219 df4 Delete type=2 #31
+2022/01/27-12:34:56.219 df4 Delete type=2 #34

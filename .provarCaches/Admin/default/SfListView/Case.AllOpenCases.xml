@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfListView n="AllOpenCases" s="List View" sfListId="00B1t000002BOFk" t="All Open Cases">
+  <actions/>
+  <columns>
+    <sfListColumn boundToField="CaseNumber" boundToObject="Case" fieldNameOrPath="CaseNumber" n="Case" s="" sortable="true"/>
+    <sfListColumn boundToField="Name" boundToObject="Contact" fieldNameOrPath="Contact.Name" n="Contact Name" s="" sortable="true"/>
+    <sfListColumn boundToField="Subject" boundToObject="Case" fieldNameOrPath="Subject" n="Subject" s="" sortable="true"/>
+    <sfListColumn boundToField="Status" boundToObject="Case" fieldNameOrPath="Status" n="Status" s="" sortable="true"/>
+    <sfListColumn boundToField="Priority" boundToObject="Case" fieldNameOrPath="Priority" n="Priority" s="" sortable="true"/>
+    <sfListColumn boundToField="CreatedDate" boundToObject="Case" fieldNameOrPath="CreatedDate" n="Date/Time Opened" s="" sortable="true"/>
+    <sfListColumn fieldNameOrPath="Owner.NameOrAlias" n="Case Owner Alias" s="" sortable="true"/>
+    <sfListColumn boundToField="Id" boundToObject="Case" fieldNameOrPath="Id" hidden="true" n="Case ID" s=""/>
+    <sfListColumn boundToField="LastModifiedDate" boundToObject="Case" fieldNameOrPath="LastModifiedDate" hidden="true" n="Last Modified Date" s=""/>
+    <sfListColumn boundToField="SystemModstamp" boundToObject="Case" fieldNameOrPath="SystemModstamp" hidden="true" n="System Modstamp" s=""/>
+    <sfListColumn boundToField="Id" boundToObject="Contact" fieldNameOrPath="Contact.Id" hidden="true" n="Contact ID" s=""/>
+    <sfListColumn boundToField="ContactId" boundToObject="Case" fieldNameOrPath="ContactId" hidden="true" n="Contact Name" s=""/>
+    <sfListColumn boundToField="RecordTypeId" boundToObject="Contact" fieldNameOrPath="Contact.RecordTypeId" hidden="true" n="Contact Record Type" s=""/>
+    <sfListColumn boundToField="Id" boundToObject="Case" fieldNameOrPath="Owner.Id" hidden="true" n="Case ID" s=""/>
+    <sfListColumn boundToField="OwnerId" boundToObject="Case" fieldNameOrPath="OwnerId" hidden="true" n="Case Owner" s=""/>
+  </columns>
+</sfListView>

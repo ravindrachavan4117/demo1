@@ -1,0 +1,6 @@
+2022/01/27-12:34:15.494 4c04 Reusing MANIFEST D:\test\.provarCaches\.chromeProfiles\profile1\Default\Local Storage\leveldb/MANIFEST-000001
+2022/01/27-12:34:15.495 4c04 Recovering log #3
+2022/01/27-12:34:15.496 4c04 Reusing old log D:\test\.provarCaches\.chromeProfiles\profile1\Default\Local Storage\leveldb/000003.log 
+2022/01/27-12:35:21.241 4c04 Level-0 table #5: started
+2022/01/27-12:35:21.244 4c04 Level-0 table #5: 15314 bytes OK
+2022/01/27-12:35:21.246 4c04 Delete type=0 #3

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfTab lightningPageUrl="/one/one.app#/sObject/Account/home" n="standard-Account" pageUrl="/001/o" s="" seqNum="0" t="Accounts">
+  <children>
+    <sfObjectReference n="Account" s=""/>
+  </children>
+</sfTab>
