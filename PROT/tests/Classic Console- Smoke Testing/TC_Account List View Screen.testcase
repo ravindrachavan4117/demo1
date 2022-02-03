@@ -1477,10 +1477,10 @@
                         </clause>
                         <clause name="else" testItemId="299">
                           <steps>
-                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="300" title="Click the Cancel button">
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="300" title="Click the Change Owner button">
                               <arguments>
                                 <argument id="locator">
-                                  <value class="uiLocator" uri="ui:locator?name=cancel&amp;path=selectOwner"/>
+                                  <value class="uiLocator" uri="ui:locator?name=ChangeOwnerOne_action"/>
                                 </argument>
                                 <argument id="interaction">
                                   <value class="uiInteraction" uri="ui:interaction?name=action"/>
@@ -1501,7 +1501,7 @@
                                   <value class="uiWait" uri="default"/>
                                 </argument>
                                 <argument id="interactionDescription">
-                                  <value class="value" valueClass="string">Click the Cancel button</value>
+                                  <value class="value" valueClass="string">Click the Change Owner button</value>
                                 </argument>
                                 <argument id="autoRetry"/>
                                 <argument id="ieClickMethod">

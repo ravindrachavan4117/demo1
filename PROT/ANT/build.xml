@@ -1,76 +1,98 @@
 <project default="runtests">
-	<property environment="env"/>
-	<property name="provar.home" value="C:/Program Files/Provar/"/>
-	<property name="testproject.home" value=".."/>
-	<property name="testproject.results" value="../ANT/Results"/>
-	<property name="secrets.password" value="${env.ProvarSecretsPassword}"/>
-	<property name="testenvironment.secretspassword" value="${env.ProvarSecretsPassword_EnvName}"/>
-	
-	
-	<taskdef name="Provar-Compile" classname="com.provar.testrunner.ant.CompileTask" classpath="${provar.home}/ant/ant-provar.jar"/>
-	<taskdef name="Run-Test-Case" classname="com.provar.testrunner.ant.RunnerTask" classpath="${provar.home}/ant/ant-provar.jar;${provar.home}/ant/ant-provar-bundled.jar;${provar.home}/ant/ant-provar-sf.jar"/>
-	<taskdef name="Test-Cycle-Report" classname="com.provar.testrunner.ant.TestCycleReportTask" classpath="${provar.home}/ant/ant-provar.jar;${provar.home}/ant/ant-provar-bundled.jar;${provar.home}/ant/ant-provar-sf.jar"/>
-	
+	<property environment="env" />
+	<property name="provar.home" value="C:/Program Files/Provar/" />
+	<property name="testproject.home" value=".." />
+	<property name="testproject.results" value="../ANT/Results" />
+	<property name="secrets.password" value="${env.ProvarSecretsPassword}" />
+	<property name="testenvironment.secretspassword" value="${env.ProvarSecretsPassword_EnvName}" />
+
+
+	<taskdef name="Provar-Compile" classname="com.provar.testrunner.ant.CompileTask" classpath="${provar.home}/ant/ant-provar.jar" />
+	<taskdef name="Run-Test-Case" classname="com.provar.testrunner.ant.RunnerTask" classpath="${provar.home}/ant/ant-provar.jar;${provar.home}/ant/ant-provar-bundled.jar;${provar.home}/ant/ant-provar-sf.jar" />
+	<taskdef name="Test-Cycle-Report" classname="com.provar.testrunner.ant.TestCycleReportTask" classpath="${provar.home}/ant/ant-provar.jar;${provar.home}/ant/ant-provar-bundled.jar;${provar.home}/ant/ant-provar-sf.jar" />
+
 	<target name="runtests">
-	<parallel>
-		<sequential>
-				<Provar-Compile provarHome="${provar.home}" projectPath="${testproject.home}"/>
-					
-						<Run-Test-Case provarHome="${provar.home}" 
-								projectPath="${testproject.home}" 
-								resultsPath="${testproject.results}" 
-								resultsPathDisposition="Increment" 
-								testEnvironment="" 
-								webBrowser="Chrome" 
-								webBrowserConfiguration="Full Screen"
-								webBrowserProviderName="Desktop"
-								webBrowserDeviceName="Full Screen" 
-								excludeCallableTestCases="false" 
-								salesforceMetadataCache="Reuse" 
-								projectCachePath="../../.provarCaches"
-								testOutputlevel="BASIC" 
-								pluginOutputlevel="WARNING"
-								stopTestRunOnError="false"
-								secretsPassword="${secrets.password}"
-								testEnvironmentSecretsPassword="${testenvironment.secretspassword}"
-								invokeTestRunMonitor="true"
-								>
-						
-							<fileset dir="../tests/Classic Console- Smoke Testing"><include name="TC_Account Create(84).testcase"/></fileset><fileset dir="../tests/Classic Console- Smoke Testing"><include name="TC_Case Inline Edit(148).testcase"/></fileset><fileset dir="../tests/Classic Console- Smoke Testing"><include name="TC_Contact Inline edit(103).testcase"/></fileset><fileset dir="../tests/Classic Console- Smoke Testing"><include name="TC_Create Case(146).testcase"/></fileset><fileset dir="../tests/Classic Console- Smoke Testing"><include name="TC_Create Contacts(101).testcase"/></fileset><fileset dir="../tests/Classic Console- Smoke Testing"><include name="TC_Edit Account(269).testcase"/></fileset><fileset dir="../tests/Classic Sales - Smoke Testing"><include name="TC_Create Case(146).testcase"/></fileset><fileset dir="../tests/Classic Sales - Smoke Testing"><include name="TC_Create Contacts(101).testcase"/></fileset><fileset dir="../tests/Classic Sales - Smoke Testing"><include name="TC_Lead Update(66).testcase"/></fileset><fileset dir="../tests/Lightning Sales - Smoke Testing"><include name="TC_Update Case(147).testcase"/></fileset>
+		<parallel>
+			<sequential>
+				<Provar-Compile provarHome="${provar.home}" projectPath="${testproject.home}" />
 
-							<emailProperties sendEmail="true" primaryRecipients="ravindrachavan4117@gmail.com" ccRecipients="" bccRecipients="" emailSubject="Provar test run report" attachExecutionReport="true" attachZip="false"/>
-							<attachmentProperties includeAllFailuresInSummary="true" includeBdd="false" includeSkipped="false" includeTestCasePathHierarchy="true" includeTestCaseShowSummary="false" includeBasicLogs="true" includeDetailLogs="false" includeDiagnosticTrace="false" includeTestStepTime="false" includeNoScreenshot="false" includeScreenshotThumbnail="false" includeFullScreenShot="true"/>
-						</Run-Test-Case>
+				<Run-Test-Case provarHome="${provar.home}" projectPath="${testproject.home}" resultsPath="${testproject.results}" resultsPathDisposition="Increment" testEnvironment="" webBrowser="Chrome" webBrowserConfiguration="Full Screen" webBrowserProviderName="Desktop" webBrowserDeviceName="Full Screen" excludeCallableTestCases="false" salesforceMetadataCache="Reuse" projectCachePath="../../.provarCaches" testOutputlevel="BASIC" pluginOutputlevel="WARNING" stopTestRunOnError="false" secretsPassword="${secrets.password}" testEnvironmentSecretsPassword="${testenvironment.secretspassword}" invokeTestRunMonitor="true">
+
+					<fileset dir="../tests/Classic Console- Smoke Testing">
+						<include name="TC_Account Create(84).testcase" />
+					</fileset>
+					<fileset dir="../tests/Classic Console- Smoke Testing">
+						<include name="TC_Case Inline Edit(148).testcase" />
+					</fileset>
+					<fileset dir="../tests/Classic Console- Smoke Testing">
+						<include name="TC_Contact Inline edit(103).testcase" />
+					</fileset>
+					<fileset dir="../tests/Classic Console- Smoke Testing">
+						<include name="TC_Create Case(146).testcase" />
+					</fileset>
+					<fileset dir="../tests/Classic Console- Smoke Testing">
+						<include name="TC_Create Contacts(101).testcase" />
+					</fileset>
+					<fileset dir="../tests/Classic Console- Smoke Testing">
+						<include name="TC_Edit Account(269).testcase" />
+					</fileset>
+					<fileset dir="../tests/Classic Sales - Smoke Testing">
+						<include name="TC_Create Case(146).testcase" />
+					</fileset>
+					<fileset dir="../tests/Classic Sales - Smoke Testing">
+						<include name="TC_Create Contacts(101).testcase" />
+					</fileset>
+					<fileset dir="../tests/Classic Sales - Smoke Testing">
+						<include name="TC_Lead Update(66).testcase" />
+					</fileset>
+					<fileset dir="../tests/Lightning Sales - Smoke Testing">
+						<include name="TC_Update Case(147).testcase" />
+					</fileset>
+
+					<emailProperties sendEmail="true" primaryRecipients="ravindrachavan4117@gmail.com" ccRecipients="" bccRecipients="" emailSubject="Provar test run report" attachExecutionReport="true" attachZip="false" />
+					<attachmentProperties includeAllFailuresInSummary="true" includeBdd="false" includeSkipped="false" includeTestCasePathHierarchy="true" includeTestCaseShowSummary="false" includeBasicLogs="true" includeDetailLogs="false" includeDiagnosticTrace="false" includeTestStepTime="false" includeNoScreenshot="false" includeScreenshotThumbnail="false" includeFullScreenShot="true" />
+				</Run-Test-Case>
 			</sequential>
-		<sequential>
-		<Provar-Compile provarHome="${provar.home}" projectPath="${testproject.home}"/>
-	
-		<Run-Test-Case provarHome="${provar.home}" 
-				projectPath="${testproject.home}" 
-				resultsPath="${testproject.results}" 
-				resultsPathDisposition="Increment" 
-				testEnvironment="" 
-				webBrowser="Chrome" 
-				webBrowserConfiguration="Full Screen"
-				webBrowserProviderName="Desktop"
-				webBrowserDeviceName="Full Screen" 
-				excludeCallableTestCases="false" 
-				salesforceMetadataCache="Reuse" 
-				projectCachePath="../../.provarCaches"
-				testOutputlevel="BASIC" 
-				pluginOutputlevel="WARNING"
-				stopTestRunOnError="false"
-				secretsPassword="${secrets.password}"
-				testEnvironmentSecretsPassword="${testenvironment.secretspassword}"
-				invokeTestRunMonitor="true"
-				>
-		
-			<fileset dir="../tests/Classic Console- Smoke Testing"><include name="TC_Account Create(84).testcase"/></fileset><fileset dir="../tests/Classic Console- Smoke Testing"><include name="TC_Case Inline Edit(148).testcase"/></fileset><fileset dir="../tests/Classic Console- Smoke Testing"><include name="TC_Contact Inline edit(103).testcase"/></fileset><fileset dir="../tests/Classic Console- Smoke Testing"><include name="TC_Create Case(146).testcase"/></fileset><fileset dir="../tests/Classic Console- Smoke Testing"><include name="TC_Create Contacts(101).testcase"/></fileset><fileset dir="../tests/Classic Console- Smoke Testing"><include name="TC_Edit Account(269).testcase"/></fileset><fileset dir="../tests/Classic Sales - Smoke Testing"><include name="TC_Create Case(146).testcase"/></fileset><fileset dir="../tests/Classic Sales - Smoke Testing"><include name="TC_Create Contacts(101).testcase"/></fileset><fileset dir="../tests/Classic Sales - Smoke Testing"><include name="TC_Lead Update(66).testcase"/></fileset><fileset dir="../tests/Lightning Sales - Smoke Testing"><include name="TC_Update Case(147).testcase"/></fileset>
+			<sequential>
+				<Provar-Compile provarHome="${provar.home}" projectPath="${testproject.home}" />
 
-			<emailProperties sendEmail="true" primaryRecipients="ravindrachavan4117@gmail.com" ccRecipients="" bccRecipients="" emailSubject="Provar test run report" attachExecutionReport="true" attachZip="false"/>
-			<attachmentProperties includeAllFailuresInSummary="true" includeBdd="false" includeSkipped="false" includeTestCasePathHierarchy="true" includeTestCaseShowSummary="false" includeBasicLogs="true" includeDetailLogs="false" includeDiagnosticTrace="false" includeTestStepTime="false" includeNoScreenshot="false" includeScreenshotThumbnail="false" includeFullScreenShot="true"/>
-		</Run-Test-Case>
-			
+				<Run-Test-Case provarHome="${provar.home}" projectPath="${testproject.home}" resultsPath="${testproject.results}" resultsPathDisposition="Increment" testEnvironment="" webBrowser="Chrome" webBrowserConfiguration="Full Screen" webBrowserProviderName="Desktop" webBrowserDeviceName="Full Screen" excludeCallableTestCases="false" salesforceMetadataCache="Reuse" projectCachePath="../../.provarCaches" testOutputlevel="BASIC" pluginOutputlevel="WARNING" stopTestRunOnError="false" secretsPassword="${secrets.password}" testEnvironmentSecretsPassword="${testenvironment.secretspassword}" invokeTestRunMonitor="true">
+
+					<fileset dir="../tests/Classic Console- Smoke Testing">
+						<include name="TC_Account Create(84).testcase" />
+					</fileset>
+					<fileset dir="../tests/Classic Console- Smoke Testing">
+						<include name="TC_Case Inline Edit(148).testcase" />
+					</fileset>
+					<fileset dir="../tests/Classic Console- Smoke Testing">
+						<include name="TC_Contact Inline edit(103).testcase" />
+					</fileset>
+					<fileset dir="../tests/Classic Console- Smoke Testing">
+						<include name="TC_Create Case(146).testcase" />
+					</fileset>
+					<fileset dir="../tests/Classic Console- Smoke Testing">
+						<include name="TC_Create Contacts(101).testcase" />
+					</fileset>
+					<fileset dir="../tests/Classic Console- Smoke Testing">
+						<include name="TC_Edit Account(269).testcase" />
+					</fileset>
+					<fileset dir="../tests/Classic Sales - Smoke Testing">
+						<include name="TC_Create Case(146).testcase" />
+					</fileset>
+					<fileset dir="../tests/Classic Sales - Smoke Testing">
+						<include name="TC_Create Contacts(101).testcase" />
+					</fileset>
+					<fileset dir="../tests/Classic Sales - Smoke Testing">
+						<include name="TC_Lead Update(66).testcase" />
+					</fileset>
+					<fileset dir="../tests/Lightning Sales - Smoke Testing">
+						<include name="TC_Update Case(147).testcase" />
+					</fileset>
+
+					<emailProperties sendEmail="true" primaryRecipients="ravindrachavan4117@gmail.com" ccRecipients="" bccRecipients="" emailSubject="Provar test run report" attachExecutionReport="true" attachZip="false" />
+					<attachmentProperties includeAllFailuresInSummary="true" includeBdd="false" includeSkipped="false" includeTestCasePathHierarchy="true" includeTestCaseShowSummary="false" includeBasicLogs="true" includeDetailLogs="false" includeDiagnosticTrace="false" includeTestStepTime="false" includeNoScreenshot="false" includeScreenshotThumbnail="false" includeFullScreenShot="true" />
+				</Run-Test-Case>
+
 			</sequential>
 		</parallel>
 	</target>

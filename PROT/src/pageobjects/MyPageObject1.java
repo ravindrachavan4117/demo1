@@ -2,6 +2,8 @@ package pageobjects;
 
 import java.util.List;
 
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -13,6 +15,15 @@ import com.provar.core.testapi.annotations.*;
      , connection="Admin"
      )             
 public class MyPageObject1 {
+    WebDriver driver;
+    public MyPageObject1(WebDriver driver){
+    this.driver=driver;
+    }
+    public  void alertHandle(){
+    Alert A=driver.switchTo().alert();
+    A.sendKeys("Name");
+    A.accept();
+    }
 
 	@ButtonType()
 	@FindBy(xpath = "//input[@id='allow']")

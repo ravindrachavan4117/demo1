@@ -336,7 +336,7 @@
                           <value class="value" valueClass="string">PROT_tests_Classic Sales - Smoke Testing 20220116 2307</value>
                         </argument>
                         <argument id="resultName">
-                          <value class="value" valueClass="string">result </value>
+                          <value class="value" valueClass="string">result</value>
                         </argument>
                         <argument id="resultScope">
                           <value class="value" valueClass="string">Test</value>

@@ -22,13 +22,20 @@
     <connectionClass name="ui">
       <connections>
         <connection name="iframe_inside_iframe">
+          <summary/>
           <connectionUrls>
-            <connectionUrl secureStorageNodeId="003c8466-7e45-4d02-b606-ed3e8e56d512" url="se:baseUrl=http://demo.automationtesting.in/Index.html"/>
+            <connectionUrl secureStorageNodeId="003c8466-7e45-4d02-b606-ed3e8e56d512" url="se:baseUrl=http://admin@demo.automationtesting.in/Index.html"/>
           </connectionUrls>
         </connection>
         <connection name="pdf">
           <connectionUrls>
             <connectionUrl secureStorageNodeId="e54ca867-3cfa-403e-af4d-eac0148707fd" url="se:baseUrl=https://www.provartesting.com/documentation/provar-trial-guide-and-extensions/provar-trial-guide-and-extensions/"/>
+          </connectionUrls>
+        </connection>
+        <connection name="w3s">
+          <summary/>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="f6835cd3-1500-42b6-9420-a479c4806460" url="se:baseUrl=https://www.w3schools.com/html/html_tables.asp"/>
           </connectionUrls>
         </connection>
       </connections>
